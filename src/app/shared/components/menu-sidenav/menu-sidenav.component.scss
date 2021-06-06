@@ -1,0 +1,104 @@
+@import "../../../../assets/colors.scss";
+
+aside {
+  background: $dusky-color;
+  overflow: hidden;
+
+  &, mat-toolbar, span {
+    color: $brightLight-color;
+  }
+
+  mat-toolbar, .menu, mat-nav-list, mat-expansion-panel {
+    background: transparent;
+  }
+
+  .menu {
+    .loading {
+      height: 1px;
+    }
+
+    span {
+      padding: 0 16px;
+      margin: 0;
+    }
+
+    mat-expansion-panel {
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+
+      mat-expansion-panel-header {
+        padding: 0 24px 0 0;
+      }
+    }
+
+    :host {
+      .mat-expansion-indicator::after {
+        color: $brightDark-color;
+      }
+      .mat-expansion-panel-body, .mat-list-item-content {
+        padding: 0;
+      }
+      .mat-list-item-content {
+        background: rgba($duskyLight-color, .15);
+      }
+      .mat-expansion-panel-body {
+        background: rgba($duskyDark-color, .5);
+
+        .mat-list-item-content {
+          background: transparent;
+        }
+
+        .mat-list-item {
+          opacity: 0;
+          text-indent: 20px;
+          transition-property: opacity, text-indent;
+          transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+          transition-duration: .4s;
+        }
+      }
+      .mat-expanded .mat-list-item {
+        opacity: 1;
+        text-indent: 0;
+      }
+      @for $i from 1 through 20 {
+        .mat-expanded .mat-list-item:nth-child(#{$i}) {
+          transition-delay: ($i - 1) * 0.12s;
+        }
+      }
+    }
+  }
+}
+
+.version-suffix {
+  background: $duskyLight-color;
+  border-radius: 8px;
+  padding: 4px;
+  opacity: .5;
+  font-family: monospace;
+  transition: opacity 350ms;
+}
+
+.version-suffix:empty {
+  padding: 0;
+  opacity: 0;
+}
+
+.clickable,
+.clickable:visited,
+.clickable:focus,
+.clickable:hover {
+  cursor: pointer;
+  outline: none;
+  transition: color 350ms;
+  color: $bright-color;
+}
+
+.clickable:focus,
+.clickable:hover {
+  color: $accentLight-color;
+
+  .version-suffix {
+    opacity: .25;
+  }
+}

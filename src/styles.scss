@@ -1,0 +1,187 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../src/assets/animations.scss';
+@import '../src/assets/media.scss';
+@import '../src/assets/boxes.scss';
+@import '../src/assets/functions.scss';
+@import '../src/assets/colors.scss';
+
+* { box-sizing: content-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #f1f1f1 ;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  border: none;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(36, 42, 51, 0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(36, 42, 51, 0.5);
+}
+
+
+.mat-typography {
+
+  // .color-primaryTitle { color: $primary-color !important;}
+  // .color-dusky { color: $dusky-color !important; }
+  // .color-duskyLight { color: $duskyLight-color !important; }
+  // .color-duskyDark { color: $duskyDark-color !important; }
+  // .color-bright { color: $bright-color !important; }
+  // .color-brightLight { color: $brightLight-color !important; }
+  // .color-brightDark { color: $brightDark-color !important; }
+  // .color-primary { color: $primary-color !important; }
+  // .color-primaryLight { color: $primaryLight-color !important; }
+  // .color-primaryDark { color: $primaryDark-color !important; }
+  // .color-accent { color: $accent-color !important; }
+  // .color-accentLight { color: $accentLight-color !important; }
+  // .color-accentDark { color: $accentDark-color !important; }
+  // .color-warn { color: $warn-color !important; }
+  // .color-warnLight { color: $warnLight-color !important; }
+  // .color-warnDark { color: $warnDark-color !important; }
+  // .color-success { color: $success-color !important; }
+  // .color-successLight { color: $successLight-color !important; }
+  // .color-successDark { color: $successDark-color !important; }
+  // .color-error { color: $error-color !important; }
+  // .color-errorLight { color: $errorLight-color !important; }
+  // .color-errorDark { color: $errorDark-color !important; }
+
+  // .background-dusky { background: $dusky-color !important; }
+  // .background-duskyLight { background: $duskyLight-color !important; }
+  // .background-duskyDark { background: $duskyDark-color !important; }
+  // .background-bright { background: $bright-color !important; }
+  // .background-brightLight { background: $brightLight-color !important; }
+  // .background-brightDark { background: $brightDark-color !important; }
+  // .background-primary { background: $primary-color !important; }
+  // .background-primaryLight { background: $primaryLight-color !important; }
+  // .background-primaryDark { background: $primaryDark-color !important; }
+  // .background-accent { background: $accent-color !important; }
+  // .background-accentLight { background: $accentLight-color !important; }
+  // .background-accentDark { background: $accentDark-color !important; }
+  // .background-warn { background: $warn-color !important; }
+  // .background-warnLight { background: $warnLight-color !important; }
+  // .background-warnDark { background: $warnDark-color !important; }
+  // .background-success { background: $success-color !important; }
+  // .background-successLight { background: $successLight-color !important; }
+  // .background-successDark { background: $successDark-color !important; }
+  // .background-error { background: $error-color !important; }
+  // .background-errorLight { background: $errorLight-color !important; }
+  // .background-errorDark { background: $errorDark-color !important; }
+
+  .align-center { text-align: center; }
+  .align-left { text-align: left; }
+  .align-right { text-align: right; }
+
+  p {
+    a, a:visited {
+      color: $duskyLight-color;
+      text-decoration: none;
+    }
+
+    a:hover, a:focus {
+      color: $accentDark-color;
+      text-decoration: underline;
+    }
+  }
+
+  table {
+    width: 100%;
+
+    td, th {
+      word-break: break-word;
+      &.align-center, &.align-left, &.align-right {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+
+
+}
+
+
+.mat-elevation-z1 { box-shadow: $box-shadow-z1; }
+.mat-elevation-z2 { box-shadow: $box-shadow-z2; }
+.mat-elevation-z3 { box-shadow: $box-shadow-z3; }
+.mat-elevation-z4 { box-shadow: $box-shadow-z4; }
+.mat-elevation-z5 { box-shadow: $box-shadow-z5; }
+.mat-elevation-z6 { box-shadow: $box-shadow-z6; }
+.mat-elevation-z7 { box-shadow: $box-shadow-z7; }
+.mat-elevation-z8 { box-shadow: $box-shadow-z8; }
+.mat-elevation-z9 { box-shadow: $box-shadow-z9; }
+.mat-elevation-z10 { box-shadow: $box-shadow-z10; }
+.mat-elevation-z11 { box-shadow: $box-shadow-z11; }
+.mat-elevation-z12 { box-shadow: $box-shadow-z12; }
+.mat-elevation-z13 { box-shadow: $box-shadow-z13; }
+.mat-elevation-z14 { box-shadow: $box-shadow-z14; }
+.mat-elevation-z15 { box-shadow: $box-shadow-z15; }
+.mat-elevation-z16 { box-shadow: $box-shadow-z16; }
+.mat-elevation-z17 { box-shadow: $box-shadow-z17; }
+.mat-elevation-z18 { box-shadow: $box-shadow-z18; }
+.mat-elevation-z19 { box-shadow: $box-shadow-z19; }
+.mat-elevation-z20 { box-shadow: $box-shadow-z20; }
+.mat-elevation-z21 { box-shadow: $box-shadow-z21; }
+.mat-elevation-z22 { box-shadow: $box-shadow-z22; }
+.mat-elevation-z23 { box-shadow: $box-shadow-z23; }
+.mat-elevation-z24 { box-shadow: $box-shadow-z24; }
+
+.mat-elevation-z1-upside-down { box-shadow: $box-shadow-z1-upside-down; }
+.mat-elevation-z2-upside-down { box-shadow: $box-shadow-z2-upside-down; }
+.mat-elevation-z3-upside-down { box-shadow: $box-shadow-z3-upside-down; }
+.mat-elevation-z4-upside-down { box-shadow: $box-shadow-z4-upside-down; }
+.mat-elevation-z5-upside-down { box-shadow: $box-shadow-z5-upside-down; }
+.mat-elevation-z6-upside-down { box-shadow: $box-shadow-z6-upside-down; }
+.mat-elevation-z7-upside-down { box-shadow: $box-shadow-z7-upside-down; }
+.mat-elevation-z8-upside-down { box-shadow: $box-shadow-z8-upside-down; }
+.mat-elevation-z9-upside-down { box-shadow: $box-shadow-z9-upside-down; }
+.mat-elevation-z10-upside-down { box-shadow: $box-shadow-z10-upside-down; }
+.mat-elevation-z11-upside-down { box-shadow: $box-shadow-z11-upside-down; }
+.mat-elevation-z12-upside-down { box-shadow: $box-shadow-z12-upside-down; }
+.mat-elevation-z13-upside-down { box-shadow: $box-shadow-z13-upside-down; }
+.mat-elevation-z14-upside-down { box-shadow: $box-shadow-z14-upside-down; }
+.mat-elevation-z15-upside-down { box-shadow: $box-shadow-z15-upside-down; }
+.mat-elevation-z16-upside-down { box-shadow: $box-shadow-z16-upside-down; }
+.mat-elevation-z17-upside-down { box-shadow: $box-shadow-z17-upside-down; }
+.mat-elevation-z18-upside-down { box-shadow: $box-shadow-z18-upside-down; }
+.mat-elevation-z19-upside-down { box-shadow: $box-shadow-z19-upside-down; }
+.mat-elevation-z20-upside-down { box-shadow: $box-shadow-z20-upside-down; }
+.mat-elevation-z21-upside-down { box-shadow: $box-shadow-z21-upside-down; }
+.mat-elevation-z22-upside-down { box-shadow: $box-shadow-z22-upside-down; }
+.mat-elevation-z23-upside-down { box-shadow: $box-shadow-z23-upside-down; }
+.mat-elevation-z24-upside-down { box-shadow: $box-shadow-z24-upside-down; }
+
+.transparent {
+  background: transparent !important;
+  color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  appearance: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.hidden {
+  @extend .transparent;
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  margin: 0 !important;
+}
+

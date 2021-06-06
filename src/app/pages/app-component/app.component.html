@@ -1,0 +1,48 @@
+<ng-template #mainContent>
+  <section class="main-content-wrapper" fxLayout="column" fxFlex="nogrow noshrink">
+      <div class="dot-wrapper">
+          <div class="dot"></div>
+      </div>
+      <div class="main-content" [class.with-loading]="isLoading$ | async">
+          <span class="router-content" [class.blured]="isLoading$ | async">
+              <router-outlet #routerOutlet="outlet"></router-outlet>
+          </span>
+          <!-- <app-loader *ngIf="isLoading$ | async"></app-loader> -->
+      </div>
+  </section>
+</ng-template>
+
+<ng-template #withoutLayout>
+  <div class="without-layout" fxFlexFill>
+      <ng-container *ngTemplateOutlet="mainContent"></ng-container>
+  </div>
+</ng-template>
+
+<mat-sidenav-container class="with-layout" *ngIf="enabled$ | async; else withoutLayout" fxFlexFill>
+  <span class="ghost-area-menu-sidenav" (swiperight)="menuSidebarSwipeRight()"></span>
+  <mat-sidenav
+      class="menu-sidenav"
+      position="start"
+      [mode]="menuSidenavMode"
+      [opened]="menuSidenavOpen$ | async"
+      (closed)="menuSidenavClosed()"
+  >
+      <app-menu-sidenav></app-menu-sidenav>
+  </mat-sidenav>
+  <mat-sidenav
+      #notificationSidenav
+      class="notification-sidenav"
+      mode="over"
+      opened="false"
+      position="end"
+  >
+  </mat-sidenav>
+  <div fxLayout="column" fxFlexFill>
+      <app-hearder></app-hearder>
+      <ng-container *ngTemplateOutlet="mainContent"></ng-container>
+      <app-footer></app-footer>
+  </div>
+</mat-sidenav-container>
+
+
+

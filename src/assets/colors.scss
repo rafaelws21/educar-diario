@@ -1,0 +1,232 @@
+
+
+$dusky-color:      #424242;
+$duskyLight-color: #6d6d6d;
+$duskyDark-color:  #1b1b1b;
+
+
+$bright-color:      #fafafa;
+$brightLight-color: #ffffff;
+$brightDark-color:  #c7c7c7;
+
+
+$primary-color:      #005da8;
+$primaryLight-color: #5e92f3;
+$primaryDark-color:  #003c8f;
+
+
+$accent-color:      #ff8f00;
+$accentLight-color: #ffc046;
+$accentDark-color:  #c56000;
+
+$warn-color:      #c2185b;
+$warnLight-color: #fa5788;
+$warnDark-color:  #8c0032;
+
+
+$success-color:      #2e7d32;
+$successLight-color: #60ad5e;
+$successDark-color:  #005005;
+
+
+$error-color:      #d50000;
+$errorLight-color: #ff5131;
+$errorDark-color:  #9b0000;
+
+$dark-primary-text: rgba(rgb(12, 12, 12), 0.87);
+$light-primary-text: white;
+
+$white-surface: rgba(255, 255, 255, 1);
+$light-surface: #F5F5F5;
+$surface-overlay: rgba(33, 33, 33, 0.08);
+
+$background-header-color: #006BAE;
+$background-header-color-green: #54BBAB;
+
+$color-title-text: #005CA9;
+
+$on-surface: (
+  hi:rgba(0, 0, 0, 0.87),
+  med:rgba(0, 0, 0, 0.6),
+  dis:rgba(0, 0, 0, 0.38)
+);
+$on-color: (
+  hi: rgba(255, 255, 255, 1),
+  med:rgba(255, 255, 255, 0.74),
+  dis:rgba(255, 255, 255, 0.38)
+);
+
+
+$elevation-overlay: (
+  1:rgba(255, 255, 255, 0.05),
+  2:rgba(255, 255, 255, 0.07),
+  3:rgba(255, 255, 255, 0.08),
+  4:rgba(255, 255, 255, 0.09),
+  6:rgba(255, 255, 255, 0.11),
+  8:rgba(255, 255, 255, 0.12),
+  12:rgba(255, 255, 255, 0.14),
+  16:rgba(255, 255, 255, 0.15),
+  24:rgba(255, 255, 255, 0.16)
+);
+
+$brand: (
+  azul-caixa: #005CA9,
+  laranja-caixa: #F39200
+);
+
+
+$azul: linear-gradient(49deg, #005CA9 6.07%, #168FCC 100%);
+$oceanoCaixa: linear-gradient(48.73deg, #0066A6 5.73%, #54BBAB 100%);
+$azul-dark: linear-gradient(49.21deg, #002E54 6.35%, #0B4766 100%);
+
+$laranja-primario: #F59300;
+$blue-dark: #005285;
+$blue-caixa:#005CA9;
+$blue-subtitle: #4C546D;
+$strong-dark: rgba(0, 0, 0, 0.87);
+
+$sucesso: #29C03B;
+$erro: #E92B2B;
+
+$success: (
+  50:#F6FEF8,
+  100:#DFFBEC,
+  200:#C1F8E0,
+  300:#9DEAD0,
+  400:#7DD6C0,
+  500:#54BBAB,
+  600:#3DA09A,
+  700:#2A8386,
+  800:#1A626C,
+  900:#104959
+);
+
+$info: (
+  50:#EBFEFB,
+  100:#CAFDF9,
+  200:#97FCFB,
+  300:#62EDF7,
+  400:#3BD6EF,
+  500:#00B5E5,
+  600:#008DC4,
+  700:#006AA4,
+  800:#004B84,
+  900:#00366D
+);
+
+$rich-blue: (
+  50: #F0FEFF,
+  100:#CBF6FD,
+  200:#99E7FC,
+  300:#65CFF6,
+  400:#3FB4EC,
+  500:#058CE1,
+  600:#036EC4,
+  700:#0251A1,
+  800:#01377F,
+  900:#001E52,
+  A100:#036EC4,
+  A200:#0251A1,
+  A400:#01377F,
+  A700:#001E52,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$warning: (
+  50:#FFFBEB,
+  100:#FEF3CB,
+  200:#FDE499,
+  300:#FBCF65,
+  400:#F8BB3F,
+  500:#F49B02,
+  600:#D17D01,
+  700:#AF6201,
+  800:#8D4900,
+  900:#753800,
+  A100:#D17D01,
+  A200:#AF6201,
+  A400:#8D4900,
+  A700:#753800,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$error: (
+  50:#FFF7F5,
+  100:#FFE4D4,
+  200:#FFC2AA,
+  300:#FF997F,
+  400:#FF7260,
+  500:#FF322B,
+  600:#DB1F29,
+  700:#B7152B,
+  800:#930D2B,
+  900:#7A082B,
+  A100:#DB1F29,
+  A200:#B7152B,
+  A400:#930D2B,
+  A700:#7A082B,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+
+$cinzas: (
+  5: #fafafa,
+  10: #F0F0F0,
+  50: #EEE,
+  60: #ececec,
+  75: #e1e1e1,
+  100: #DDD,
+  200: #CCC,
+  300: #BBB,
+  400: #AAA,
+  500: #999,
+  600: #888,
+  700: #777,
+  800: #666,
+  900: #555,
+);

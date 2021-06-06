@@ -1,0 +1,156 @@
+
+$xs: 'screen and (max-width: 599px)';
+$sm: 'screen and (min-width: 600px) and (max-width: 959px)';
+$md: 'screen and (min-width: 960px) and (max-width: 1279px)';
+$lg: 'screen and (min-width: 1280px) and (max-width: 1919px)';
+$xl: 'screen and (min-width: 1920px) and (max-width: 5000px)';
+
+$lt-sm: 'screen and (max-width: 599px)';
+$lt-md: 'screen and (max-width: 959px)';
+$lt-lg: 'screen and (max-width: 1279px)';
+$lt-xl: 'screen and (max-width: 1919px)';
+
+$gt-xs: 'screen and (min-width: 600px)';
+$gt-sm: 'screen and (min-width: 960px)';
+$gt-md: 'screen and (min-width: 1280px)';
+$gt-lg: 'screen and (min-width: 1920px)';
+
+@function size($valor) {
+  @return ($valor * 8px);
+}
+
+@function neg_size($valor) {
+  @return calc(100% - #{size($valor)});
+}
+
+@function neg_size_percent($percent, $valor) {
+  @return calc(#{$percent + '%'} - #{size($valor)});
+}
+
+@mixin selection() {
+  -webkit-touch-callout: initial;
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+@mixin noSelection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin square($value) {
+  height: $value;
+  width: $value;
+}
+
+@mixin roundBorder() {
+  border-radius: size(0.5);
+}
+
+@mixin fullWidth() {
+  width: 100%;
+}
+
+@mixin fullHeight() {
+  height: 100%;
+}
+
+@mixin fullSize() {
+  @include fullWidth;
+  @include fullHeight;
+}
+
+
+@mixin absoluteFullSize() {
+  position: absolute;
+  @include fullWidth;
+  @include fullHeight;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerVertically() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin centerHorizontally() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin start() {
+  left: 0;
+  top: 0;
+}
+
+@mixin reset() {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+@mixin lowShadow() {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@mixin highShadow() {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+@mixin smoothShadow() {
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 20px;
+}
+
+
+
+@mixin graph() {
+  position: relative;
+  display: block;
+  height: size(50);
+
+  app-frame {
+    @include fullSize;
+  }
+}
+
+@mixin contentSize() {
+  height: calc(100vh - 64px);
+}
+
+@mixin scrollable() {
+  box-sizing: border-box;
+  overflow-y: auto;
+  @include fullHeight;
+  padding-top: size(7);
+}
+
+@mixin testBorder() {
+  border: solid 1px;
+  box-sizing: border-box;
+}
+
+
+@mixin paginaConteudo() {
+  @include fullWidth();
+  font-family: FuturaLT, sans-serif !important;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 20px 102px;
+
+  @include responsive($lt-sm) {
+    margin: auto;
+    padding: 24px 16px 0 16px;
+  }
+}

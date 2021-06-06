@@ -1,0 +1,60 @@
+<ng-template #menuTemplate let-itens="itens" let-descricao="descricao" let-path="path">
+  <ng-template #externalLinkTemplate>
+      <a mat-list-item [attr.href]="path">
+          <span matLine>{{ descricao }}</span>
+      </a>
+  </ng-template>
+  <ng-container *ngIf="path">
+      <a *ngIf="isInternalLink(path) else externalLinkTemplate" mat-list-item [routerLink]="path">
+          <span matLine>{{ descricao }}</span>
+      </a>
+  </ng-container>
+  <mat-expansion-panel *ngIf="!path">
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+              <span>{{ descricao }}</span>
+          </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list *ngIf="itens?.length">
+          <ng-container *ngFor="let item of itens">
+              <ng-container *ngTemplateOutlet="menuTemplate;context:item"></ng-container>
+          </ng-container>
+      </mat-nav-list>
+  </mat-expansion-panel>
+</ng-template>
+
+<ng-template #loading>
+  <mat-progress-bar class="loading" mode="query" color="accent"></mat-progress-bar>
+</ng-template>
+
+<aside fxLayout="column" fxFlexFill (swipeleft)="closeMenu()">
+  <mat-toolbar class="mat-elevation-z2">
+      <mat-toolbar-row class="clickable" fxLayout="row" [routerLink]="homeRoute">
+          {{ appName }}
+      </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="menu hide-scrollbars" fxFlex="nogrow noshrink">
+      <ng-container *ngIf="(menu$ | async) as menu else loading">
+          <mat-nav-list *ngIf="menu?.length">
+              <ng-container *ngFor="let item of menu">
+                  <ng-container *ngTemplateOutlet="menuTemplate;context:item"></ng-container>
+              </ng-container>
+          </mat-nav-list>
+      </ng-container>
+  </div>
+
+  <mat-toolbar class="mat-elevation-z1-upside-down">
+      <mat-toolbar-row fxLayout="row">
+          <span class="clickable" [routerLink]="versionRoute">
+              {{ appVersion }}
+              <span class="version-suffix">{{ appVersionSuffix$ | async }}</span>
+          </span>
+          <span fxFlex></span>
+          <a mat-icon-button aria-label="Fechar painel" (click)="closeMenu()">
+              <mat-icon aria-hidden>chevron_left</mat-icon>
+          </a>
+      </mat-toolbar-row>
+  </mat-toolbar>
+</aside>
+

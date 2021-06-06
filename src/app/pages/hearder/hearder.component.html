@@ -1,0 +1,7 @@
+<mat-toolbar class="mat-elevation-z6">
+  <button mat-icon-button *ngIf="!(menuSidenavOpen$ | async)" (click)="openMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title" *ngIf="(title$ | async) as title" [matTooltip]="title">{{ title }}</span>
+  <span fxFlex></span>
+</mat-toolbar>
