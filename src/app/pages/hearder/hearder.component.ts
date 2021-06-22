@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { LayoutService } from 'src/app/shared/services/layout.service';
+import { switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-hearder',
@@ -22,7 +23,13 @@ export class HearderComponent implements OnInit {
 
   ngOnInit(): void {
     this.menuSidenavOpen$ = this.layoutService.menuSidenavOpen();
-    this.title$ = this.layoutService.getTitle();
+    this.title$ = this.layoutService
+      .getTitle()
+      .pipe(tap(response => {
+          console.log('response title -->', response);
+          return response;
+        }
+      ));
   }
 
   openMenu(): void {

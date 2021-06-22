@@ -35,7 +35,7 @@
   </mat-toolbar>
 
   <div class="menu hide-scrollbars" fxFlex="nogrow noshrink">
-      <ng-container *ngIf="(menu$ | async) as menu else loading">
+      <ng-container *ngIf="menu as menu else loading">
           <mat-nav-list *ngIf="menu?.length">
               <ng-container *ngFor="let item of menu">
                   <ng-container *ngTemplateOutlet="menuTemplate;context:item"></ng-container>
@@ -48,7 +48,7 @@
       <mat-toolbar-row fxLayout="row">
           <span class="clickable" [routerLink]="versionRoute">
               {{ appVersion }}
-              <span class="version-suffix">{{ appVersionSuffix$ | async }}</span>
+              <span class="version-suffix">{{ appVersionSuffix }}</span>
           </span>
           <span fxFlex></span>
           <a mat-icon-button aria-label="Fechar painel" (click)="closeMenu()">

@@ -10,25 +10,29 @@ import { MenuService } from '../../services/menu.service';
 @Component({
   selector: 'app-menu-sidenav',
   templateUrl: './menu-sidenav.component.html',
-  styleUrls: ['./menu-sidenav.component.scss']
+  styleUrls: ['./menu-sidenav.component.scss'],
 })
 export class MenuSidenavComponent implements OnInit {
-
   homeRoute = `/home`;
   versionRoute = `000`;
-  appName!: string;
-  appVersion!: string;
-  appVersionSuffix$!: Observable<string>;
-  menu$!: Observable<MenuModel[]>;
-
+  appName: string = 'Educar & Diario';
+  appVersion: string = '0.0.0';
+  appVersionSuffix: string = '---';
+  menu: MenuModel[] = [
+    {
+      descricao: 'TESTE',
+      path: '',
+      itens: [{ descricao: 'TESTE - sub', path: '' }],
+    },
+  ];
 
   constructor(
     // @Inject('LayoutConfig')
     // private layoutConfig: LayoutConfig,
     private configService: ConfigService,
     private layoutService: LayoutService,
-    private menuService: MenuService,
-  ) { }
+    private menuService: MenuService
+  ) {}
 
   ngOnInit(): void {
     // this.appName = this.layoutConfig.appName;
@@ -56,5 +60,4 @@ export class MenuSidenavComponent implements OnInit {
     const regex = /^https?:\/\/[^\/].*/;
     return !regex.test(path);
   }
-
 }

@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  supportList: {
+    label: string,
+    linkText: string,
+    linkHref: string,
+  }[] = [];
 
   ngOnInit(): void {
+    this.supportList.push({
+      label: 'E-mail',
+      linkHref: 'mailto:suporte.sistemas@teste.com.br',
+      linkText: 'suporte.sistemas@teste.com.br',
+    });
+    this.supportList.push({
+      label: 'Fale Conosco',
+      linkHref: 'http://www.teste.com.br/fale-conosco',
+      linkText: 'http://www.teste.com.br/fale-conosco',
+    });
   }
 
 }

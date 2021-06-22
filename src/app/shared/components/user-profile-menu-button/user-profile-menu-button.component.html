@@ -1,0 +1,36 @@
+<mat-menu #menu="matMenu" class="mat-menu-without-padding">
+  <div class="header" fxLayout="row" fxLayoutAlign="center">
+      <mat-icon class="avatar" matListIcon fxFlexAlign="center">account_circle</mat-icon>
+      <div class="details" fxLayout="column" fxLayoutAlign="center start">
+          <h2>{{ nomeCompleto$ | async }}</h2>
+          <h3>{{ (perfil$ | async)?.descricao }}</h3>
+      </div>
+  </div>
+
+  <div class="list">
+    <!-- <app-system-menu-button datasusOnMobile="show" type="menu-item"></app-system-menu-button> -->
+    <!-- <button mat-menu-item (click)="changeProfile()">
+        <mat-icon class="icon" matListIcon>compare_arrows</mat-icon>
+        <span>Perfil</span>
+    </button> -->
+    <mat-divider *ngIf="helpLink"></mat-divider>
+    <a mat-menu-item *ngIf="helpLink" [href]="helpLink" target="_blank">
+        <mat-icon class="icon" matListIcon>help</mat-icon>
+        <span>Ajuda</span>
+    </a>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="logout()">
+        <mat-icon class="icon" matListIcon>exit_to_app</mat-icon>
+        <span>Sair</span>
+    </button>
+  </div>
+</mat-menu>
+
+<!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon matListIcon>account_circle</mat-icon>
+</button> -->
+
+<button class="button" mat-button [matMenuTriggerFor]="menu">
+  <span class="username">{{ nomeCompleto$ | async }}</span>
+  <mat-icon matListIcon>account_circle</mat-icon>
+</button>

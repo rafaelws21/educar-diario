@@ -1,0 +1,37 @@
+@import '../../../../assets/colors.scss';
+@import '../../../../assets/icon.scss';
+
+.header {
+  background: $dusky-color;
+  color: $bright-color;
+  padding: 20px;
+
+  .avatar {
+    @include icon-sizing(40px);
+  }
+
+  .details {
+    h2, h3, h4 { margin: 0px; }
+  }
+}
+
+.list {
+  padding-top: 0px;
+
+  .icon {
+    @include icon-sizing(18px);
+  }
+}
+
+.button {
+  padding-right: 12px;
+
+  .username {
+    margin: 0 4px;
+    font-size: 16px;
+    max-width: 80px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

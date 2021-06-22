@@ -1,0 +1,40 @@
+@import '../../../assets/boxes.scss';
+@import '../../../assets/media.scss';
+
+mat-toolbar {
+  z-index: 5;
+  position: relative;
+  overflow: hidden;
+
+  &, button, span, img { transition: all .4s; }
+
+  button { display: none; }
+
+  span p {
+    font-size: .6em;
+    line-height: 1em;
+    margin: 0;
+  }
+
+  img {
+    max-width: 392px;
+    max-height: 50px;
+    filter: grayscale(1);
+  }
+
+  &:hover img {
+    filter: grayscale(0);
+  }
+}
+
+
+@include media-mobile {
+  mat-toolbar {
+    button { display: block; }
+    span:not(:empty) { display: none; }
+    img {
+      max-width: 284px;
+      max-height: 42px;
+    }
+  }
+}

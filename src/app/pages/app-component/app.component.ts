@@ -98,6 +98,7 @@ export class AppComponent {
     this.changeDetectorRef.detectChanges();
     this.enabled$ = this.layoutService.isEnabled().pipe(
       tap((enabled: boolean) => {
+        console.log('enabled -->', enabled);
         if (enabled) {
           this.calculateSidenavStatus();
         }

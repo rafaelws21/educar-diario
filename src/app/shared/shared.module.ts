@@ -8,18 +8,20 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MenuSidenavComponent } from './components/menu-sidenav/menu-sidenav.component';
 import { MaterialModule } from 'src/material/material.module';
 import { RouterModule } from '@angular/router';
+import { UserProfileMenuButtonComponent } from './components/user-profile-menu-button/user-profile-menu-button.component';
 
 
 
 @NgModule({
   declarations: [
     MenuSidenavComponent,
+    UserProfileMenuButtonComponent,
   ],
   exports: [
     MenuSidenavComponent,
+    UserProfileMenuButtonComponent,
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,

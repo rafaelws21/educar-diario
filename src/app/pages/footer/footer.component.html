@@ -1,1 +1,25 @@
-<p>footer works!</p>
+<mat-toolbar class="mat-elevation-z2-upside-down">
+  <mat-toolbar-row>
+
+      <mat-menu #supportListMenu="matMenu">
+          <a *ngFor="let supportItem of supportList" mat-menu-item [href]="supportItem.linkHref" target="blank">
+              <span>{{ supportItem.label }}</span>
+          </a>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="supportListMenu" matTooltip="Duvidas?">
+          <mat-icon>perm_phone_msg</mat-icon>
+      </button>
+
+      <span>
+          <p *ngFor="let supportItem of supportList">
+              {{ supportItem.label }}:
+              <a [href]="supportItem.linkHref" target="blank">{{ supportItem.linkText }}</a>
+          </p>
+      </span>
+
+      <span fxFlex></span>
+
+
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,17 @@
+@import '../../../assets/media.scss';
+
+mat-toolbar {
+  position: relative;
+  z-index: 1;
+
+  .title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @include media-mobile {
+    .title {
+      font-size: .7em;
+    }
+  }
+}

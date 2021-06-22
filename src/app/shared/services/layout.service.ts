@@ -31,6 +31,7 @@ export class LayoutService {
    * @param title Título da funcionalidade
    */
   setTitle(title: string): void {
+    console.log('title service--->', title);
     if (title) {
       this.on();
     }
